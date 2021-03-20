@@ -1,5 +1,3 @@
-
-
 $bg-color: #333;
 $font-color: #fff;
 $primary-color: #1FC997;
@@ -8,8 +6,9 @@ $icon-size: 30px;
 
 
 #home-section{
-  background: url('../img/dev.jpg') no-repeat;
+  background: url('../img/bu.jpeg') no-repeat;
   min-height: 1250px;
+  
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -70,6 +69,72 @@ $icon-size: 30px;
     color: $primary-color;
   }
   
+}
+
+#client-speak {
+
+  .img-fluid{
+    border-radius: 50%;
+    width: 100px;
+    overflow:hidden;
+    position:unset;
+    margin-top: -30px;
+    display: inline-block;
+  }
+
+  .card-form {
+    background-color:#f8f9fa;
+  }
+
+  .rating{
+    margin: 0px 0px 20px 25px
+  }
+
+  .checked {
+    color: orange;
+  }
+}
+
+#get-in-touch-section{
+  background-color: #f8f9fa;
+
+  .icn {
+    color: $primary-color;
+  }
+
+  .box{
+    width: 300px;
+    height: 25px;
+  }
+
+  .linkedin{
+    margin-left: 17px;
+  }
+
+  .github{
+    margin: 0px 15px 0px 15px; 
+  }
+
+  .form-name{
+    width: 350px;
+    margin-right: 25px;;
+  }
+
+  .form-email{
+    width: 350px;
+  }
+
+  .form-yourself{
+    width: 725px;
+    height: 110px;
+  }
+
+  @media only screen and (max-width: 1200px) {
+    .form-yourself{
+      width: 350px;
+      height: 110px;
+    }
+  }
 }
 
 
