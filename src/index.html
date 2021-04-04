@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html lang="en">
 
   <head>
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -12,11 +12,43 @@
   </head>
   <body id="home">
     <!-- Nav bar -->
-    <div class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <nav id="nav" class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
       <div class="container">
-        <a href="index.html" class="navbar-brand">Nirajan Pandey</a>
+        <a href="#home" class="navbar-brand">Nirajan Pandey</a>
+
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a href="#about-me-section" class="nav-link">About Me</a>
+            </li>
+            <li class="nav-item">
+              <a href="#what-i-do" class="nav-link">What I Do?</a>
+            </li>
+            <li class="nav-item">
+              <a href="#resume-section" class="nav-link">Resume</a>
+            </li>
+            <li class="nav-item">
+              <a href="#skills" class="nav-link">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a href="#my-work" class="nav-link">My Work</a>
+            </li>
+            <li class="nav-item">
+              <a href="#client-speak" class="nav-link">Clients</a>
+            </li>
+            <li class="nav-item">
+              <a href="#get-in-touch-section" class="nav-link">Contact</a>
+            </li>
+
+          </ul>
+        </div>
       </div>
-    </div>
+    </nav>
+
+  
 
     <!-- Home Section -->
     <header id="home-section">
@@ -30,7 +62,7 @@
               <div class="display-4">This is Nirajan Pandey</div>
             </div>
             <div class="row justify-content-center text-light check">
-              <p>based on Boston, Mass</p>
+              <p>based in Greater Boston Area, Mass</p>
             </div>
             <div class="row justify-content-center text-light check">
               <input type="button" value="Hire Me">
@@ -158,6 +190,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste provident delectus corporis distinctio neque eligendi!</p>
               </div>
             </div>
+            <div class="py-2"></div>
             <div class="card card-form">
               <div class="card-body">
                 <p class="badge badge-secondary badge-color">2017-2021</p>
@@ -177,6 +210,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste provident delectus corporis distinctio neque eligendi!</p>
               </div>
             </div>
+            <div class="py-2"></div>
             <div class="card card-form">
               <div class="card-body">
                 <p class="badge badge-secondary badge-color">2020-2021</p>
@@ -189,9 +223,9 @@
         </div>
         </div>
           <!-- Skills -->
-        <div class="skills">
+        <div id="skills" class="bg-light">
           <div class="container">
-            <h2 class="py-2">My Skills</h2>
+            <h2 class="py-5 text-center display-4">My Skills</h2>
             <div class="row">
               <div class="col-lg-6">
                 <div class="bar">
@@ -232,11 +266,13 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="row justify-content-center py-5">
-          <input type="button" value="Download CV">
-        </div> 
+
+          <div class="row justify-content-center py-5">
+            <input type="button" value="Download CV">
+          </div> 
       </div>
+        
+    <!-- </div> -->
     </header>
 
     <!-- My Work -->
@@ -260,11 +296,11 @@
     </header>
 
     <!-- Client Speak Section -->
-    <header id="client-speak">
+    <header id="client-speak" class="bg-light">
       <div class="container py-5">
         <div class="display-4 text-center ">Client Speak</div>
         <div class="row py-5">
-          <div class="col-lg-6">
+          <div class="col-lg-6 py-2">
             <div class="card card-form">
               <div class="card-body">
                 <div class="d-flex flex-row client">
@@ -276,7 +312,7 @@
                     <p>Client from USA</p>
                   </div>
                 </div>
-                <div>"Awesome Product from Awesome fells. Loving it!!"</div>
+                <div>"Awesome Product from Awesome fella. Loving it!!"</div>
               </div>
 
               <div class="rating">
@@ -288,8 +324,8 @@
               </div>
             </div>
           </div>
-
-          <div class="col-lg-6">
+          
+          <div class="col-lg-6 py-2">
             <div class="card card-form">
               <div class="card-body">
                 <div class="d-flex flex-row client">
@@ -301,7 +337,7 @@
                     <p>Client from Nepal</p>
                   </div>
                 </div>
-                <div>"Very smooth and nice produce with responsive design. Loving it!!"</div>
+                <div>"Very nice product with responsive design. Loving it!!"</div>
               </div>
 
               <div class="rating">
@@ -318,14 +354,14 @@
     </header>
 
     <!-- Get in Touch -->
-    <header id="get-in-touch-section">
+    <header id="get-in-touch-section" >
       <div class="container py-5">
         <div class="display-4 text-center">Get in Touch</div>
         <div class="row py-5">
           <div class="col-lg-4">
             <h2>Address</h2>
             <div class="py-2">
-              <p>Commonwealth Ave </br> Boston, MA</p>
+              <p>Commonwealth Ave </p> <p>Boston, MA</p>
             </div>
             <div class="d-flex flex-row box">
               <div >
@@ -376,13 +412,14 @@
               <div class="form-group">
                 <input type="email" class="form-control form-control-sm form-email" placeholder="Email">
               </div>
-              <div class="form-group">
-                <textarea class="form-control form-control-sm form-yourself" cols="2" rows="5">Tell me about your needs..</textarea>
+              <div class="form-group d-flex">
+                <textarea class="form-control form-control-sm form-yourself" cols="2" rows="5" placeholder="Tell me about your needs.."></textarea> 
               </div>
+              
             </form>
-            <div class="row justify-content-center">
+            <div class="justify-content-center">
               <input type="button" value="Send Message">
-            </div> 
+            </div>
           </div>
         </div>
       </div>
@@ -400,6 +437,10 @@
         </div>
       </div>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
 
     
   </body>

@@ -4,14 +4,35 @@ $primary-color: #1FC997;
 $dark-overlay: rgba(0,0,0,0.7);
 $icon-size: 30px;
 
+// *{
+//   width: 100%;
+// }
+
+html,body
+{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+// html, body {
+//   width: 100%; 
+// }
+
+#nav {
+  overflow: hidden;
+  
+}
 
 #home-section{
   background: url('../img/bu.jpeg') no-repeat;
-  min-height: 1250px;
+  min-height: 1305px;
   
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  //background:fixed;
 
   .dark-overlay {
     background-color: $dark-overlay;
@@ -63,8 +84,6 @@ $icon-size: 30px;
 }
 
 #my-work{
-  background-color: #f8f9fa;
-
   #all-works:hover h4 {
     color: $primary-color;
   }
@@ -96,8 +115,6 @@ $icon-size: 30px;
 }
 
 #get-in-touch-section{
-  background-color: #f8f9fa;
-
   .icn {
     color: $primary-color;
   }
@@ -128,15 +145,17 @@ $icon-size: 30px;
     width: 725px;
     height: 110px;
   }
+}
 
-  @media only screen and (max-width: 1200px) {
-    .form-yourself{
+  // * {
+  //   background: #000 !important;
+  //   color: #0f0 !important;
+  //   outline: solid #f00 1px !important;
+  // }
+
+  @media  (max-width: 1200px) {
+    #get-in-touch-section .form-yourself{
       width: 350px;
       height: 110px;
     }
   }
-}
-
-
-
-
