@@ -4,8 +4,41 @@ html, body {
   padding: 0px;
   overflow-x: hidden; }
 
+#sidebar {
+  height: 100%;
+  width: 240px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px; }
+  #sidebar .my-photo {
+    display: block;
+    border-radius: 50%;
+    width: 128px;
+    border: 8px solid #343A40;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    height: 170px;
+    width: 170px; }
+  #sidebar a {
+    color: #fff; }
+  #sidebar .box {
+    text-align: center;
+    padding: 16px 0px 16px 0px;
+    margin: 30px 0px 30px 0px;
+    display: flex;
+    flex-basis: auto; }
+
+.page-content {
+  margin-left: 240px; }
+
 #nav {
-  overflow: hidden; }
+  overflow: hidden;
+  background-color: #111418; }
 
 #home-section {
   background: url("../img/bu.jpeg") no-repeat;
@@ -21,8 +54,6 @@ html, body {
     left: 0;
     width: 100%;
     min-height: 1305px; }
-  #home-section .home-inner {
-    padding-top: 420px; }
 
 #what-i-do {
   background-color: #f8f9fa; }
@@ -92,3 +123,18 @@ html, body {
   #get-in-touch-section .form-yourself {
     width: 350px;
     height: 110px; } }
+
+@media (min-width: 992px) {
+  #nav {
+    display: none;
+    background: #111418; }
+  .home-inner {
+    padding: 420px 0px 0px 170px; } }
+
+@media (max-width: 992px) {
+  #sidebar {
+    display: none; }
+  .page-content {
+    margin-left: 0px; }
+  .home-inner {
+    padding: 420px 0px 0px 30px; } }
