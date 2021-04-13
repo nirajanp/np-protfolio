@@ -42,7 +42,7 @@ html, body {
 
 #home-section {
   background: url("../img/bu.jpeg") no-repeat;
-  min-height: 1305px;
+  min-height: 100vh;
   background-size: cover;
   background-position: center;
   background-attachment: fixed; }
@@ -53,7 +53,7 @@ html, body {
     top: 0;
     left: 0;
     width: 100%;
-    min-height: 1305px; }
+    min-height: 100vh; }
 
 #what-i-do {
   background-color: #f8f9fa; }
@@ -124,12 +124,11 @@ html, body {
     width: 350px;
     height: 110px; } }
 
-@media (min-width: 992px) {
-  #nav {
-    display: none;
-    background: #111418; }
-  .home-inner {
-    padding: 420px 0px 0px 170px; } }
+@media (max-width: 768px) {
+  #get-in-touch-section .form-yourself {
+    display: inline;
+    width: 350px;
+    height: 110px; } }
 
 @media (max-width: 992px) {
   #sidebar {
@@ -137,4 +136,29 @@ html, body {
   .page-content {
     margin-left: 0px; }
   .home-inner {
-    padding: 420px 0px 0px 30px; } }
+    padding: 180px 0px 0px 30px; } }
+
+@media (max-width: 375px) and (min-width: 320px) {
+  #get-in-touch-section .form-yourself {
+    width: 270px;
+    height: 100px; }
+  #get-in-touch-section .form-email {
+    width: 270px; }
+  #get-in-touch-section .form-name {
+    width: 270px; } }
+
+@media (max-width: 280px) {
+  #get-in-touch-section .form-yourself {
+    width: 220px;
+    height: 100px; }
+  #get-in-touch-section .form-email {
+    width: 220px; }
+  #get-in-touch-section .form-name {
+    width: 220px; } }
+
+@media (min-width: 992px) {
+  #nav {
+    display: none;
+    background: #111418; }
+  .home-inner {
+    padding: 420px 0px 0px 170px; } }

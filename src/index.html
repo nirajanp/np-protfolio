@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
-    
+    <script src="js/script.js" defer></script>
     <title>Protfolio</title>
   </head>
   <body id="home">
@@ -53,7 +53,7 @@
       <div class="container">
         <a href="#home" class="navbar-brand">Nirajan Pandey</a>
 
-        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <button id="nav-btn" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -74,7 +74,7 @@
               <a href="#my-work" class="nav-link">My Work</a>
             </li>
             <li class="nav-item">
-              <a href="#client-speak" class="nav-link">Clients</a>
+              <a href="#client-speak" class="nav-link">Professors/Colleague</a>
             </li>
             <li class="nav-item">
               <a href="#get-in-touch-section" class="nav-link">Contact</a>
@@ -130,7 +130,7 @@
           </div>
           <div class="col-lg-3 col-md-6 col-6">
             <h1>10+</h1>
-            <p>Happy Clients</p>
+            <p>Happy Professors</p>
           </div>
           <div class="col-lg-3 col-md-6 col-6">
             <h1>20+</h1>
@@ -333,7 +333,7 @@
     <!-- Client Speak Section -->
     <header id="client-speak" class="bg-light px-4">
       <div class="container py-5">
-        <div class="display-4 text-center ">Client Speak</div>
+        <div class="display-4 text-center ">Professors/Colleague</div>
         <div class="row py-5">
           <div class="col-lg-6 py-2">
             <div class="card card-form">
@@ -347,7 +347,7 @@
                     <p>Client from USA</p>
                   </div>
                 </div>
-                <div>"Awesome Product from Awesome fella. Loving it!!"</div>
+                <div>"Awesome Product from Awesome fella."</div>
               </div>
 
               <div class="rating">
@@ -441,16 +441,22 @@
           <div class="col-lg-8">
             <h2>Send me a note</h2>
             <form class="row">
-              <div class="form-group">
-                <input type="text" class="form-control form-control-sm form-name" placeholder="Name" >
-              </div>
-              <div class="form-group">
-                <input type="email" class="form-control form-control-sm form-email" placeholder="Email">
-              </div>
-              <div class="form-group d-flex">
-                <textarea class="form-control form-control-sm form-yourself" cols="2" rows="5" placeholder="Tell me about your needs.."></textarea> 
-              </div>
+              <form  class="row">
+                <div class="form-group">
+                  <input type="text" class="form-control form-control-sm form-name" placeholder="Name" >
+                </div>
+              </form>
+              <form class="row">
+                <div class="form-group">
+                  <input type="email" class="form-control form-control-sm form-email" placeholder="Email">
+                </div>
+              </form>
               
+              <form class="row">
+                <div class="form-group">
+                  <textarea class="form-control form-control-sm form-yourself" cols="2" rows="5" placeholder="Tell me about your needs.."></textarea> 
+                </div>
+              </form>
             </form>
             <div class="justify-content-center">
               <input type="button" value="Send Message">
@@ -477,6 +483,7 @@
 
     
 
+  
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
