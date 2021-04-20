@@ -10,7 +10,18 @@ html,body
     margin: 0px;
     padding: 0px;
     overflow-x: hidden; 
+    scroll-behavior: smooth;
 }
+
+.btn-primary, .btn-primary:hover {
+ background-color: transparent;
+ border-color: $primary-color;
+ width: 150px;
+ height: 40px;
+ border-radius: 20px;
+ border-width: 3px;
+}
+
 
 #sidebar {
   height: 100%;
@@ -76,10 +87,23 @@ html,body
       width: 100%;
       min-height: 100vh;
   }
+
+  #arrow{
+    color: white;
+    width: 20px;
+  } 
 }
 
 #about-me-section{
-
+  .dwnl-btn {
+    background-color: $primary-color;
+ border-color: $primary-color;
+ color: white;
+ width: 150px;
+ height: 40px;
+ border-radius: 20px;
+ border-width: 3px;
+  }
 }
 
 #what-i-do{
@@ -110,6 +134,16 @@ html,body
     width: 50%;
     background: $primary-color;
   }
+
+  .dwnl-btn {
+    background-color: $primary-color;
+    border-color: $primary-color;
+    width: 160px;
+    height: 40px;
+    border-radius: 20px;
+    color: white;
+  }
+
 }
 
 #my-work{
@@ -143,6 +177,18 @@ html,body
   }
 }
 
+#skills {
+
+  .dwnl-btn {
+    background-color: transparent;
+    border-color: #6C757D;
+    width: 160px;
+    height: 40px;
+    border-radius: 20px;
+    color: #6C757D ;
+  }
+}
+
 #get-in-touch-section{
   .icn {
     color: $primary-color;
@@ -173,6 +219,26 @@ html,body
   .form-yourself{
     width: 725px;
     height: 110px;
+  }
+
+  .send-msg-btn {
+    background-color: $primary-color;
+    border-color: $primary-color;
+    width: 160px;
+    height: 40px;
+    border-radius: 20px;
+    color: white;
+  }
+}
+
+#main-footer {
+  #top {
+    background-color: transparent;
+    border-color: $primary-color;
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    color: #161d24 ;
   }
 }
 

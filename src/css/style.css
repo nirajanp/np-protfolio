@@ -2,7 +2,16 @@ html, body {
   width: 100%;
   margin: 0px;
   padding: 0px;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  scroll-behavior: smooth; }
+
+.btn-primary, .btn-primary:hover {
+  background-color: transparent;
+  border-color: #1FC997;
+  width: 150px;
+  height: 40px;
+  border-radius: 20px;
+  border-width: 3px; }
 
 #sidebar {
   height: 100%;
@@ -54,6 +63,18 @@ html, body {
     left: 0;
     width: 100%;
     min-height: 100vh; }
+  #home-section #arrow {
+    color: white;
+    width: 20px; }
+
+#about-me-section .dwnl-btn {
+  background-color: #1FC997;
+  border-color: #1FC997;
+  color: white;
+  width: 150px;
+  height: 40px;
+  border-radius: 20px;
+  border-width: 3px; }
 
 #what-i-do {
   background-color: #f8f9fa; }
@@ -75,6 +96,14 @@ html, body {
   width: 50%;
   background: #1FC997; }
 
+#resume-section .dwnl-btn {
+  background-color: #1FC997;
+  border-color: #1FC997;
+  width: 160px;
+  height: 40px;
+  border-radius: 20px;
+  color: white; }
+
 #my-work #all-works:hover h4 {
   color: #1FC997; }
 
@@ -94,6 +123,14 @@ html, body {
 
 #client-speak .checked {
   color: orange; }
+
+#skills .dwnl-btn {
+  background-color: transparent;
+  border-color: #6C757D;
+  width: 160px;
+  height: 40px;
+  border-radius: 20px;
+  color: #6C757D; }
 
 #get-in-touch-section .icn {
   color: #1FC997; }
@@ -118,6 +155,22 @@ html, body {
 #get-in-touch-section .form-yourself {
   width: 725px;
   height: 110px; }
+
+#get-in-touch-section .send-msg-btn {
+  background-color: #1FC997;
+  border-color: #1FC997;
+  width: 160px;
+  height: 40px;
+  border-radius: 20px;
+  color: white; }
+
+#main-footer #top {
+  background-color: transparent;
+  border-color: #1FC997;
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  color: #161d24; }
 
 @media (max-width: 1200px) {
   #get-in-touch-section .form-yourself {

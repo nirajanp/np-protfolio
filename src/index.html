@@ -15,7 +15,7 @@
     <div id="sidebar">
       <div class="container text-center">
         <div>
-          <img class="my-photo" src="https://media-exp1.licdn.com/dms/image/C5603AQGhsrOFM5RYzQ/profile-displayphoto-shrink_400_400/0/1595863948312?e=1623283200&v=beta&t=r6gflm2f6PNt4AGE2EqTpYZXdMusvOW8HbEh3unURMI" alt="" >
+          <img class="my-photo" id="avatar" src="" alt="" >
         </div>
         <h5 class="text-light py-2">Nirajan Pandey</h5>
 
@@ -59,25 +59,25 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a href="#about-me-section" class="nav-link">About Me</a>
+              <a href="#about-me-section" id="abt-me" class="nav-link">About Me</a>
             </li>
             <li class="nav-item">
-              <a href="#what-i-do" class="nav-link">What I Do?</a>
+              <a href="#what-i-do" id="work" class="nav-link">What I Do?</a>
             </li>
             <li class="nav-item">
-              <a href="#resume-section" class="nav-link">Resume</a>
+              <a href="#resume-section" id="bio" class="nav-link">Resume</a>
             </li>
             <li class="nav-item">
-              <a href="#skills" class="nav-link">Skills</a>
+              <a href="#skills" id="expertese" class="nav-link">Skills</a>
             </li>
             <li class="nav-item">
-              <a href="#my-work" class="nav-link">My Work</a>
+              <a href="#my-work" id="previous-work" class="nav-link">My Work</a>
             </li>
             <li class="nav-item">
-              <a href="#client-speak" class="nav-link">Professors/Colleague</a>
+              <a href="#client-speak" id="comments" class="nav-link">Professors/Colleague</a>
             </li>
             <li class="nav-item">
-              <a href="#get-in-touch-section" class="nav-link">Contact</a>
+              <a href="#get-in-touch-section" id="contact-info" class="nav-link">Contact</a>
             </li>
 
           </ul>
@@ -90,17 +90,22 @@
       <div class="dark-overlay ">
         <div class="home-inner">
           <div class="container vertical-center">
-            <div class="row justify-content-center text-light check">
+            <div class="row justify-content-center text-light">
                 <p>Welcome</p> 
             </div>
-            <div class="row justify-content-center text-light check">
+            <div class="row justify-content-center text-light">
               <div class="display-4">This is Nirajan Pandey</div>
             </div>
-            <div class="row justify-content-center text-light check">
+            <div class="row justify-content-center text-light">
               <p>based in Greater Boston Area, Mass</p>
             </div>
-            <div class="row justify-content-center text-light check">
-              <input type="button" value="Hire Me">
+            <div class="row justify-content-center button">
+                <a href="#get-in-touch-section" class="btn btn-primary">Hire Me</a>
+            </div>
+            <div class="row justify-content-center">
+              <div id="arrow">
+                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" class="svg-inline--fa fa-chevron-down fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg>
+              </div>
             </div>
            </div>
         </div>
@@ -120,7 +125,8 @@
             <p><strong>Email:</strong> nirajanp@bu.edu</p>
             <p><strong>Ager:</strong> 24</p>
             <p><strong>From:</strong> Boston, MA</p>
-            <input type="button" value="Download CV" id="dwnl-btn">
+
+            <a href="https://www.bu.edu/academics/eng/programs/computer-engineering/ms/" target="_blank" class="btn btn-primary dwnl-btn">Download CV</a>
           </div> 
         </div>
         <div class="row mt-4">
@@ -303,7 +309,9 @@
           </div>
 
           <div class="row justify-content-center py-5">
-            <input type="button" value="Download CV">
+            <!-- <input type="button" value="Download CV" class="dwnl-btn"> -->
+
+            <a href="https://www.bu.edu/academics/eng/programs/computer-engineering/ms/" target="_blank" class="btn btn-primary dwnl-btn">Download CV</a>
           </div> 
       </div>
         
@@ -316,16 +324,8 @@
         <div class="display-4 text-center">My Work</div>
         <p class="row justify-content-center" id="all-works" >All</p>
       
-        <div class="row">
-          <div class="col-md-4">
-            <img src="img/tree.jpeg" class="img-fluid" >
-          </div>
-          <div class="col-md-4">
-            <img src="img/cartt.jpeg" class="img-fluid">
-          </div>
-          <div class="col-md-4">
-            <img src="img/queen.jpeg" class="img-fluid">
-          </div>
+        <div class="row" id="repos">
+          
         </div>
       </div>
     </header>
@@ -459,7 +459,7 @@
               </form>
             </form>
             <div class="justify-content-center">
-              <input type="button" value="Send Message">
+              <input type="button" value="Send Message" class="send-msg-btn">
             </div>
           </div>
         </div>
@@ -472,8 +472,10 @@
         <div class="row">
           <div class="col text-center">
             <div class="py-4"></div>
+            <input type="button" id="top" value="Top">
               <p>Copyright &copy 2021</p>
             </div>
+          </div>
           </div>
         </div>
       </div>
