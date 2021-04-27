@@ -282,9 +282,17 @@ html,body
  }
 }
 
-@media (max-width: 360px) {
-  #what-i-do {
-    
+@media (max-width: 414px) {
+  #what-i-do .p-4 {
+    padding: 0px !important;
+  }
+
+  #icon-comp {
+    display: none;
+  }
+
+  #icon-ts{
+    display: none;
   }
 }
   
