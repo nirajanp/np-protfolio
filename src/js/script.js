@@ -12,9 +12,7 @@ const getInTouch = document.getElementById("contact-info");
 const toTop = document.getElementById("top");
 const text = document.querySelector(".name");
 
-const user = {};
-
-
+// const user = {};
 
 class APIs {
    fetchPhoto () {
@@ -65,11 +63,11 @@ class APIs {
    }
   
   sendEmail() {
-    var form = document.getElementById("my-form");
+    let form = document.getElementById("my-form");
         async function handleSubmit(event) {
           event.preventDefault();
-          var status = document.getElementById("my-form-status");
-          var data = new FormData(event.target);
+          let status = document.getElementById("my-form-status");
+          let data = new FormData(event.target);
           fetch(event.target.action, {
             method: form.method,
             body: data,
@@ -85,9 +83,7 @@ class APIs {
         }
         form.addEventListener("submit", handleSubmit)
   }
-  
-
-  }
+}
 
 const navCollapseFunction = function () {
   for (link of links) {
@@ -149,7 +145,6 @@ apis.geoAPI();
 animation();
 navCollapseFunction();
 getDateFunc();
-//smoothScroll('about-me-section', 1000);
 
 arrow.addEventListener("click", () => {
   smoothScroll("about-me-section");

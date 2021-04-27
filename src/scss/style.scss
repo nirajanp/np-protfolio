@@ -1,27 +1,48 @@
 $bg-color: #333;
 $font-color: #fff;
-$primary-color: #1FC997;
-$dark-overlay: rgba(0,0,0,0.7);
+$primary-color: #1fc997;
+$dark-overlay: rgba(0, 0, 0, 0.7);
 $icon-size: 30px;
 
-html,body
-{
-    width: 100%;
-    margin: 0px;
-    padding: 0px;
-    overflow-x: hidden; 
-    scroll-behavior: smooth;
+html,
+body {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.btn-primary, .btn-primary:hover {
- background-color: transparent;
- border-color: $primary-color;
- width: 150px;
- height: 40px;
- border-radius: 20px;
- border-width: 3px;
+.btn-primary {
+  background-color: transparent;
+  border-color: $primary-color;
+  width: 150px;
+  height: 40px;
+  border-radius: 20px;
+  border-width: 3px;
 }
 
+.btn-primary {
+  &:hover {
+    background-color: transparent;
+    border-color: $primary-color;
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    border-width: 3px;
+  }
+}
+
+a:visited {
+  color: green;
+}
+
+p {
+  + span {
+    color: brown;
+  }
+}
 
 #sidebar {
   height: 100%;
@@ -34,46 +55,44 @@ html,body
   overflow-x: hidden;
   padding-top: 20px;
 
-  .my-photo{
+  .my-photo {
     display: block;
     border-radius: 50%;
     width: 128px;
-    border: 8px solid #343A40;
-    margin-left:auto;
-    margin-right: auto; 
-    margin-top: auto;  
+    border: 8px solid #343a40;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
     height: 170px;
     width: 170px;
   }
 
-  a{
+  a {
     color: #fff;
   }
 
-  .box  {
+  .box {
     text-align: center;
     padding: 16px 0px 16px 0px;
     margin: 30px 0px 30px 0px;
     display: flex;
     flex-basis: auto;
   }
-} 
+}
 
 .page-content {
   margin-left: 240px;
-  
 }
 
 #nav {
   overflow: hidden;
   background-color: #111418;
-  
 }
 
-#home-section{
-  background: url('../img/bu.jpeg') no-repeat;
+#home-section {
+  background: url("../img/bu.jpeg") no-repeat;
   min-height: 100vh;
-  
+
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -81,45 +100,66 @@ html,body
   .dark-overlay {
     background-color: $dark-overlay;
     background-color: $dark-overlay;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      min-height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
   }
 
-  #arrow{
+  #arrow {
     color: white;
     width: 20px;
-  } 
+  }
 
   
 }
 
-#about-me-section{
+#about-me-section {
   .dwnl-btn {
     background-color: $primary-color;
- border-color: $primary-color;
- color: white;
- width: 150px;
- height: 40px;
- border-radius: 20px;
- border-width: 3px;
+    border-color: $primary-color;
+    color: white;
+    width: 160px;
+    height: 40px;
+    border-radius: 20px;
+    border-width: 3px;
+
+    &:hover {
+      background-color: black;
+      border-color: $primary-color;
+      width: 150px;
+      height: 40px;
+      border-radius: 20px;
+      border-width: 3px;
+    }
+  }
+
+  span::selection {
+    color: white;
+    background-color: black;
   }
 }
 
-#what-i-do{
-    background-color: #f8f9fa;
+#what-i-do {
+  background-color: #f8f9fa;
 
-    .icn {
-      color: $primary-color;
-      background: #FFFFFF;
-      border-radius: 5px;
-      padding: 9px;
-      margin-top: 10px;
-      box-shadow: 0px 0px 2px 2px;
-      // font-size: $icon-size;
-    }
+  .icn {
+    color: $primary-color;
+    background: #ffffff;
+    border-radius: 5px;
+    padding: 9px;
+    margin-top: 10px;
+    box-shadow: 0px 0px 2px 2px;
+    // font-size: $icon-size;
+  }
+
+  span::selection, li::selection {
+    color: white;
+    background-color: black;
+  }
+
+  
 }
 
 #resume-section {
@@ -127,16 +167,7 @@ html,body
     background: $primary-color;
   }
 
-  .progress {
-    height: 7px;
-    
-  }
-
-  .progress-bar {
-    width: 50%;
-    background: $primary-color;
-  }
-
+  
   .dwnl-btn {
     background-color: $primary-color;
     border-color: $primary-color;
@@ -146,13 +177,17 @@ html,body
     color: white;
   }
 
+  span::selection {
+    color: white;
+    background-color: black;
+  }
 }
 
-#my-work{
+#my-work {
   .all-works:hover h4 {
     color: $primary-color;
   }
-  
+
   .card {
     width: 100%;
     margin-bottom: 10px;
@@ -160,22 +195,21 @@ html,body
 }
 
 #client-speak {
-
-  .img-fluid{
+  .img-fluid {
     border-radius: 50%;
     width: 100px;
-    overflow:hidden;
-    position:unset;
+    overflow: hidden;
+    position: unset;
     margin-top: -30px;
     display: inline-block;
   }
 
   .card-form {
-    background-color:#f8f9fa;
+    background-color: #f8f9fa;
   }
 
-  .rating{
-    margin: 0px 0px 20px 25px
+  .rating {
+    margin: 0px 0px 20px 25px;
   }
 
   .checked {
@@ -184,45 +218,64 @@ html,body
 }
 
 #skills {
-
   .dwnl-btn {
     background-color: transparent;
-    border-color: #6C757D;
+    border-color: #6c757d;
     width: 160px;
     height: 40px;
     border-radius: 20px;
-    color: #6C757D ;
+    color: #6c757d;
+
+    &:hover {
+      background-color: black;
+      border-color: #6c757d;
+      width: 150px;
+      height: 40px;
+      border-radius: 20px;
+      border-width: 3px;
+      color: white;
+    }
   }
+
+  .progress {
+    height: 7px;
+  }
+
+  .progress-bar {
+    width: 50%;
+    background:$primary-color;
+  }
+
 }
 
-#get-in-touch-section{
+#get-in-touch-section {
   .icn {
     color: $primary-color;
   }
 
-  .box{
+  .box {
     width: 300px;
     height: 25px;
   }
 
-  .linkedin{
+  .linkedin {
     margin-left: 17px;
   }
 
-  .github{
-    margin: 0px 15px 0px 15px; 
+  .github {
+    margin: 0px 15px 0px 15px;
   }
 
-  .form-name{
+  .form-name {
     width: 350px;
-    margin-right: 25px;;
+    margin-right: 25px;
   }
 
-  .form-email{
+  .form-email {
     width: 350px;
   }
 
-  .form-yourself{
+  .form-yourself {
     width: 350px;
     height: 110px;
   }
@@ -244,7 +297,7 @@ html,body
     width: 100px;
     height: 40px;
     border-radius: 20px;
-    color: #161d24 ;
+    color: #161d24;
   }
 
   #map {
@@ -253,36 +306,36 @@ html,body
   }
 }
 
-  @media  (max-width: 1200px) {
-    #get-in-touch-section .form-yourself{
-      width: 350px;
-      height: 110px;
-    }
+@media (max-width: 1200px) {
+  #get-in-touch-section .form-yourself {
+    width: 350px;
+    height: 110px;
   }
-
-  @media  (max-width: 768px) {
-    #get-in-touch-section .form-yourself{
-      display: inline;
-      width: 350px;
-      height: 110px;
-    }
-  }
-
-  @media (max-width: 992px) {
-    #sidebar {
-      display: none;
-    }
-
-    .page-content {
-      margin-left: 0px;
-    }
-
-    .home-inner{
-      padding: 180px 0px 0px 30px;
- }
 }
 
-@media (max-width: 414px) {
+@media (max-width: 768px) {
+  #get-in-touch-section .form-yourself {
+    display: inline;
+    width: 350px;
+    height: 110px;
+  }
+}
+
+@media (max-width: 992px) {
+  #sidebar {
+    display: none;
+  }
+
+  .page-content {
+    margin-left: 0px;
+  }
+
+  .home-inner {
+    padding: 60px 0px 0px 0px;
+  }
+}
+
+@media (max-width: 450px) {
   #what-i-do .p-4 {
     padding: 0px !important;
   }
@@ -291,52 +344,48 @@ html,body
     display: none;
   }
 
-  #icon-ts{
+  #icon-ts {
     display: none;
   }
 }
-  
-  @media (max-width: 375px) and (min-width: 320px){
-    #get-in-touch-section .form-yourself{
-      width: 270px;
-      height: 100px;
-    }
 
-    #get-in-touch-section .form-email {
-      width: 270px;
-    }
-
-    #get-in-touch-section  .form-name {
-      width: 270px;
-    }
+@media (max-width: 375px) and (min-width: 320px) {
+  #get-in-touch-section .form-yourself {
+    width: 270px;
+    height: 100px;
   }
 
-  @media (max-width: 280px) {
-    #get-in-touch-section .form-yourself{
-      width: 220px;
-      height: 100px;
-    }
-
-    #get-in-touch-section .form-email {
-      width: 220px;
-    }
-
-    #get-in-touch-section  .form-name {
-      width: 220px;
-    }
+  #get-in-touch-section .form-email {
+    width: 270px;
   }
 
+  #get-in-touch-section .form-name {
+    width: 270px;
+  }
+}
 
-  @media (min-width: 992px) {
-    #nav {
-      display: none;
-      background: #111418;
-    }
-
-    .home-inner{
-      padding: 420px 0px 0px 170px;
- }
+@media (max-width: 280px) {
+  #get-in-touch-section .form-yourself {
+    width: 220px;
+    height: 100px;
   }
 
+  #get-in-touch-section .form-email {
+    width: 220px;
+  }
 
+  #get-in-touch-section .form-name {
+    width: 220px;
+  }
+}
 
+@media (min-width: 992px) {
+  #nav {
+    display: none;
+    background: #111418;
+  }
+
+  .home-inner {
+    padding: 20px 0px 0px 0px;
+  }
+}

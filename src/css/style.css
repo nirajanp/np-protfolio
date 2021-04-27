@@ -1,17 +1,33 @@
-html, body {
+html,
+body {
   width: 100%;
   margin: 0px;
   padding: 0px;
   overflow-x: hidden;
-  scroll-behavior: smooth; }
+  scroll-behavior: smooth;
+  font-family: Arial, Helvetica, sans-serif; }
 
-.btn-primary, .btn-primary:hover {
+.btn-primary {
   background-color: transparent;
-  border-color: #1FC997;
+  border-color: #1fc997;
   width: 150px;
   height: 40px;
   border-radius: 20px;
   border-width: 3px; }
+
+.btn-primary:hover {
+  background-color: transparent;
+  border-color: #1fc997;
+  width: 150px;
+  height: 40px;
+  border-radius: 20px;
+  border-width: 3px; }
+
+a:visited {
+  color: green; }
+
+p + span {
+  color: brown; }
 
 #sidebar {
   height: 100%;
@@ -27,7 +43,7 @@ html, body {
     display: block;
     border-radius: 50%;
     width: 128px;
-    border: 8px solid #343A40;
+    border: 8px solid #343a40;
     margin-left: auto;
     margin-right: auto;
     margin-top: auto;
@@ -68,44 +84,55 @@ html, body {
     width: 20px; }
 
 #about-me-section .dwnl-btn {
-  background-color: #1FC997;
-  border-color: #1FC997;
+  background-color: #1fc997;
+  border-color: #1fc997;
   color: white;
-  width: 150px;
+  width: 160px;
   height: 40px;
   border-radius: 20px;
   border-width: 3px; }
+  #about-me-section .dwnl-btn:hover {
+    background-color: black;
+    border-color: #1fc997;
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    border-width: 3px; }
+
+#about-me-section span::selection {
+  color: white;
+  background-color: black; }
 
 #what-i-do {
   background-color: #f8f9fa; }
   #what-i-do .icn {
-    color: #1FC997;
-    background: #FFFFFF;
+    color: #1fc997;
+    background: #ffffff;
     border-radius: 5px;
     padding: 9px;
     margin-top: 10px;
     box-shadow: 0px 0px 2px 2px; }
+  #what-i-do span::selection, #what-i-do li::selection {
+    color: white;
+    background-color: black; }
 
 #resume-section .badge-color {
-  background: #1FC997; }
-
-#resume-section .progress {
-  height: 7px; }
-
-#resume-section .progress-bar {
-  width: 50%;
-  background: #1FC997; }
+  background: #1fc997; }
 
 #resume-section .dwnl-btn {
-  background-color: #1FC997;
-  border-color: #1FC997;
+  background-color: #1fc997;
+  border-color: #1fc997;
   width: 160px;
   height: 40px;
   border-radius: 20px;
   color: white; }
 
+#resume-section span::selection {
+  color: white;
+  background-color: black; }
+
 #my-work .all-works:hover h4 {
-  color: #1FC997; }
+  color: #1fc997; }
 
 #my-work .card {
   width: 100%;
@@ -130,14 +157,29 @@ html, body {
 
 #skills .dwnl-btn {
   background-color: transparent;
-  border-color: #6C757D;
+  border-color: #6c757d;
   width: 160px;
   height: 40px;
   border-radius: 20px;
-  color: #6C757D; }
+  color: #6c757d; }
+  #skills .dwnl-btn:hover {
+    background-color: black;
+    border-color: #6c757d;
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    border-width: 3px;
+    color: white; }
+
+#skills .progress {
+  height: 7px; }
+
+#skills .progress-bar {
+  width: 50%;
+  background: #1fc997; }
 
 #get-in-touch-section .icn {
-  color: #1FC997; }
+  color: #1fc997; }
 
 #get-in-touch-section .box {
   width: 300px;
@@ -161,8 +203,8 @@ html, body {
   height: 110px; }
 
 #get-in-touch-section .send-msg-btn {
-  background-color: #1FC997;
-  border-color: #1FC997;
+  background-color: #1fc997;
+  border-color: #1fc997;
   width: 160px;
   height: 40px;
   border-radius: 20px;
@@ -170,7 +212,7 @@ html, body {
 
 #main-footer #top {
   background-color: transparent;
-  border-color: #1FC997;
+  border-color: #1fc997;
   width: 100px;
   height: 40px;
   border-radius: 20px;
@@ -197,9 +239,9 @@ html, body {
   .page-content {
     margin-left: 0px; }
   .home-inner {
-    padding: 180px 0px 0px 30px; } }
+    padding: 60px 0px 0px 0px; } }
 
-@media (max-width: 414px) {
+@media (max-width: 450px) {
   #what-i-do .p-4 {
     padding: 0px !important; }
   #icon-comp {
@@ -230,4 +272,4 @@ html, body {
     display: none;
     background: #111418; }
   .home-inner {
-    padding: 420px 0px 0px 170px; } }
+    padding: 20px 0px 0px 0px; } }
