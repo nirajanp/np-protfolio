@@ -10,38 +10,85 @@ const myWork = document.getElementById("previous-work");
 const clientSpeak = document.getElementById("comments");
 const getInTouch = document.getElementById("contact-info");
 const toTop = document.getElementById("top");
+const text = document.querySelector(".name");
 
 const user = {};
 
-fetch("https://api.github.com/users/nirajanp")
+
+
+class APIs {
+   fetchPhoto () {
+    fetch("https://api.github.com/users/nirajanp")
   .then((res) => res.json())
   .then((data) => {
     console.log(data);
     document.getElementById("avatar").setAttribute("src", data.avatar_url);
   });
-
-  fetch("https://api.github.com/users/nirajanp/repos")
-  .then((res) => res.json())
-    .then((data) => {
-      
-    console.log(data);
-    for (let repo of data) {
-      //console.log(repo);
-      const card = document.createElement("div");
-      card.setAttribute("class", "card");
-      const cardBody = document.createElement("div");
-      cardBody.setAttribute("class", "card-body");
-      const heading = document.createElement("h5");
-      heading.setAttribute("class", "card-title");
-      heading.innerHTML = repo.name;
-      
-      cardBody.appendChild(heading);
-      card.appendChild(cardBody);
-      console.log(card);
-      document.getElementById("repos").appendChild(card);
-    }
-    });
+    
+     
+   }
   
+   fetchRepo() {
+    fetch("https://api.github.com/users/nirajanp/repos")
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data);
+      for (let repo of data) {
+        //console.log(repo);
+        const card = document.createElement("div");
+        card.setAttribute("class", "card");
+        const cardBody = document.createElement("div");
+        cardBody.setAttribute("class", "card-body");
+        const heading = document.createElement("h5");
+        heading.setAttribute("class", "card-title");
+        heading.innerHTML = repo.name.toUpperCase();
+  
+        cardBody.appendChild(heading);
+        card.appendChild(cardBody);
+        //console.log(card);
+        document.getElementById("repos").appendChild(card);
+      }
+    });  
+   }
+  
+   geoAPI(){
+    fetch("https://ipapi.co/json", {
+      headers: {
+        "Content-Type": "application/json; charset=utf-8",
+      },
+      json: true,
+    })
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data);
+    })
+   }
+  
+  sendEmail() {
+    var form = document.getElementById("my-form");
+        async function handleSubmit(event) {
+          event.preventDefault();
+          var status = document.getElementById("my-form-status");
+          var data = new FormData(event.target);
+          fetch(event.target.action, {
+            method: form.method,
+            body: data,
+            headers: {
+                'Accept': 'application/json'
+            }
+          }).then(response => {
+            status.innerHTML = "Thanks for your submission!";
+            form.reset()
+          }).catch(error => {
+            status.innerHTML = "Oops! There was a problem submitting your form"
+          });
+        }
+        form.addEventListener("submit", handleSubmit)
+  }
+  
+
+  }
+
 const navCollapseFunction = function () {
   for (link of links) {
     link.addEventListener("click", () => {
@@ -49,6 +96,16 @@ const navCollapseFunction = function () {
         "navbar-collapse collapse";
     });
   }
+};
+
+function getDateFunc() {
+  const writeDate = document.getElementById("date");
+  const date = new Date();
+  const dateTemplate = document.getElementById("for-date");
+  const dateTemplateBody = document.importNode(dateTemplate.content, true);
+  dateTemplateBody.getElementById("date-para").textContent =
+    "Copyright © " + date.getFullYear();
+  writeDate.append(dateTemplateBody);
 }
 
 function smoothScroll(target) {
@@ -61,7 +118,37 @@ function smoothScroll(target) {
   });
 }
 
+const animation = function () {
+  text.innerHTML = text.textContent.replace(
+    /\S/g,
+    "<span class='letter'>$&</span>"
+  );
+  anime
+    .timeline({ loop: true })
+    .add({
+      targets: ".name .letter",
+      opacity: [0, 1],
+      easing: "easeInOutQuad",
+      duration: 2250,
+      delay: (el, i) => 150 * (i + 1),
+    })
+    .add({
+      targets: ".name",
+      opacity: 0,
+      duration: 1000,
+      easing: "easeOutExpo",
+      delay: 1000,
+    });
+};
+
+const apis = new APIs();
+apis.fetchPhoto();
+apis.fetchRepo();
+apis.sendEmail();
+apis.geoAPI();
+animation();
 navCollapseFunction();
+getDateFunc();
 //smoothScroll('about-me-section', 1000);
 
 arrow.addEventListener("click", () => {

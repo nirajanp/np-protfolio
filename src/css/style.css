@@ -104,8 +104,12 @@ html, body {
   border-radius: 20px;
   color: white; }
 
-#my-work #all-works:hover h4 {
+#my-work .all-works:hover h4 {
   color: #1FC997; }
+
+#my-work .card {
+  width: 100%;
+  margin-bottom: 10px; }
 
 #client-speak .img-fluid {
   border-radius: 50%;
@@ -153,7 +157,7 @@ html, body {
   width: 350px; }
 
 #get-in-touch-section .form-yourself {
-  width: 725px;
+  width: 350px;
   height: 110px; }
 
 #get-in-touch-section .send-msg-btn {
@@ -171,6 +175,10 @@ html, body {
   height: 40px;
   border-radius: 20px;
   color: #161d24; }
+
+#main-footer #map {
+  height: 400px;
+  width: 100%; }
 
 @media (max-width: 1200px) {
   #get-in-touch-section .form-yourself {

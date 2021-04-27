@@ -92,6 +92,8 @@ html,body
     color: white;
     width: 20px;
   } 
+
+  
 }
 
 #about-me-section{
@@ -147,10 +149,14 @@ html,body
 }
 
 #my-work{
-  #all-works:hover h4 {
+  .all-works:hover h4 {
     color: $primary-color;
   }
   
+  .card {
+    width: 100%;
+    margin-bottom: 10px;
+  }
 }
 
 #client-speak {
@@ -217,7 +223,7 @@ html,body
   }
 
   .form-yourself{
-    width: 725px;
+    width: 350px;
     height: 110px;
   }
 
@@ -240,13 +246,12 @@ html,body
     border-radius: 20px;
     color: #161d24 ;
   }
-}
 
-  // * {
-  //   background: #000 !important;
-  //   color: #0f0 !important;
-  //   outline: solid #f00 1px !important;
-  // }
+  #map {
+    height: 400px;
+    width: 100%;
+  }
+}
 
   @media  (max-width: 1200px) {
     #get-in-touch-section .form-yourself{
@@ -277,6 +282,11 @@ html,body
  }
 }
 
+@media (max-width: 360px) {
+  #what-i-do {
+    
+  }
+}
   
   @media (max-width: 375px) and (min-width: 320px){
     #get-in-touch-section .form-yourself{
@@ -319,4 +329,6 @@ html,body
       padding: 420px 0px 0px 170px;
  }
   }
+
+
 
