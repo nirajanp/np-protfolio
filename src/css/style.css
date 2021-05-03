@@ -269,9 +269,9 @@ div + input {
   #get-in-touch-section .form-name {
     width: 220px; } }
 
-@media (min-width: 992px) {
+@media (min-width: 1023px) {
   #nav {
     display: none;
     background: #111418; }
   .home-inner {
-    padding: 20px 0px 0px 20px; } }
+    padding: 20px 0px 0px 160px; } }

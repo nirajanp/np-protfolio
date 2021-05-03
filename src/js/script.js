@@ -11,6 +11,7 @@ const clientSpeak = document.getElementById("comments");
 const getInTouch = document.getElementById("contact-info");
 const toTop = document.getElementById("top");
 const text = document.querySelector(".name");
+const avatarName = document.getElementById("avatar-name");
 
 
 class APIs {
@@ -99,9 +100,7 @@ function getDateFunc() {
   writeDate.append(dateTemplateBody);
 }
   
-  
-  
-  
+ 
   const navCollapseFunction = function () {
     for (link of links) {
       link.addEventListener("click", () => {
@@ -190,3 +189,7 @@ getInTouch.addEventListener("click", () => {
 toTop.addEventListener("click", () => {
   smoothScroll("home-section");
 });
+
+avatarName.addEventListener("click", () => {
+  smoothScroll("home-section");
+})
