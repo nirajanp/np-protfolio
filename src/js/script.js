@@ -1,3 +1,6 @@
+// import { getLocation } from "./module.js";
+// import { getDateFunc } from "./module.js";
+
 const navbar = document.getElementById("nav");
 const links = navbar.getElementsByClassName("nav-link");
 const arrow = document.getElementById("arrow");
@@ -21,9 +24,7 @@ class APIs {
   .then((data) => {
     console.log(data);
     document.getElementById("avatar").setAttribute("src", data.avatar_url);
-  });
-    
-     
+  }); 
    }
   
    fetchRepo() {
@@ -49,19 +50,6 @@ class APIs {
     });  
    }
   
-   geoAPI(){
-    fetch("https://ipapi.co/json", {
-      headers: {
-        "Content-Type": "application/json; charset=utf-8",
-      },
-      json: true,
-    })
-    .then((res) => res.json())
-    .then((data) => {
-      console.log(data);
-    })
-   }
-  
   sendEmail() {
     let form = document.getElementById("my-form");
         async function handleSubmit(event) {
@@ -83,16 +71,28 @@ class APIs {
         }
         form.addEventListener("submit", handleSubmit)
   }
+
+  geoAPI(){
+    fetch("https://ipapi.co/json", {
+      headers: {
+        "Content-Type": "application/json; charset=utf-8",
+      },
+      json: true,
+    })
+    .then((res) => res.json())
+    .then((data) => {
+      getLocation(data.city, data.region);
+    })
+   }
 }
 
-const navCollapseFunction = function () {
-  for (link of links) {
-    link.addEventListener("click", () => {
-      document.getElementById("navbarCollapse").className =
-        "navbar-collapse collapse";
-    });
-  }
-};
+function getLocation(city, region) {
+  const writeLoc = document.getElementById("loc");
+      const locTemplate = document.getElementById("for-location");
+      const locTemplateBody = document.importNode(locTemplate.content, true);
+      locTemplateBody.getElementById("usr-loc").textContent = city + ", " + region;
+      writeLoc.append(locTemplateBody);
+}
 
 function getDateFunc() {
   const writeDate = document.getElementById("date");
@@ -103,39 +103,53 @@ function getDateFunc() {
     "Copyright © " + date.getFullYear();
   writeDate.append(dateTemplateBody);
 }
-
-function smoothScroll(target) {
-  target = document.getElementById(target);
-  window.scroll({
-    top:
-      target.getBoundingClientRect().y -
-      document.body.getBoundingClientRect().y,
-    behavior: "smooth",
-  });
-}
-
-const animation = function () {
-  text.innerHTML = text.textContent.replace(
-    /\S/g,
-    "<span class='letter'>$&</span>"
-  );
-  anime
-    .timeline({ loop: true })
-    .add({
-      targets: ".name .letter",
-      opacity: [0, 1],
-      easing: "easeInOutQuad",
-      duration: 2250,
-      delay: (el, i) => 150 * (i + 1),
-    })
-    .add({
-      targets: ".name",
-      opacity: 0,
-      duration: 1000,
-      easing: "easeOutExpo",
-      delay: 1000,
+  
+  
+  
+  
+  const navCollapseFunction = function () {
+    for (link of links) {
+      link.addEventListener("click", () => {
+        document.getElementById("navbarCollapse").className =
+          "navbar-collapse collapse";
+      });
+    }
+  };
+  
+  function smoothScroll(target) {
+    target = document.getElementById(target);
+    window.scroll({
+      top:
+        target.getBoundingClientRect().y -
+        document.body.getBoundingClientRect().y,
+      behavior: "smooth",
     });
-};
+  }
+  
+  const animation = function () {
+    text.innerHTML = text.textContent.replace(
+      /\S/g,
+      "<span class='letter'>$&</span>"
+    );
+    anime
+      .timeline({ loop: true })
+      .add({
+        targets: ".name .letter",
+        opacity: [0, 1],
+        easing: "easeInOutQuad",
+        duration: 2250,
+        delay: (el, i) => 150 * (i + 1),
+      })
+      .add({
+        targets: ".name",
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 1000,
+      });
+  }
+
+
 
 const apis = new APIs();
 apis.fetchPhoto();

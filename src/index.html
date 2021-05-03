@@ -1,26 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js" defer></script>
-    
-    <script src="js/script.js" defer></script>
-    <title>Portfolio</title>
-  </head>
-  <body id="home">
-    <template id="for-date">
-      <p id="date-para"></p>
-    </template>
+<head>
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js" defer></script>
+
+  <script src="js/script.js" defer></script>
+  <title>Portfolio</title>
+</head>
+
+<body id="home">
+  <template id="for-date">
+    <p id="date-para"></p>
+  </template>
+
+  <template id="for-location">
+    <h5 id="usr-loc"></h5>
+  </template>
   <div class="wrapper">
+    <!-- Side bar -->
     <div id="sidebar">
       <div class="container text-center">
         <div>
-          <img class="my-photo" id="avatar" src="" alt="" >
+          <img class="my-photo" id="avatar" src="/" alt="">
         </div>
         <h5 class="text-light py-2">Nirajan Pandey</h5>
 
@@ -42,7 +48,7 @@
               <a href="#my-work" class="nav-link">My Work</a>
             </li>
             <li class="nav-item">
-              <a href="#client-speak" class="nav-link">Clients</a>
+              <a href="#client-speak" class="nav-link">Colleague</a>
             </li>
             <li class="nav-item">
               <a href="#get-in-touch-section" class="nav-link">Contact</a>
@@ -54,445 +60,489 @@
 
     <div class="page-content">
       <!-- Nav bar -->
-    <nav id="nav" class="navbar navbar-expand-lg bg-dar  navbar-dark fixed-top">
-      <div class="container">
-        <a href="#home" class="navbar-brand">Nirajan Pandey</a>
+      <nav id="nav" class="navbar navbar-expand-lg bg-dar  navbar-dark fixed-top">
+        <div class="container">
+          <a href="#home" class="navbar-brand">Nirajan Pandey</a>
 
-        <button id="nav-btn" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a href="#about-me-section" id="abt-me" class="nav-link">About Me</a>
-            </li>
-            <li class="nav-item">
-              <a href="#what-i-do" id="work" class="nav-link">What I Do?</a>
-            </li>
-            <li class="nav-item">
-              <a href="#resume-section" id="bio" class="nav-link">Resume</a>
-            </li>
-            <li class="nav-item">
-              <a href="#skills" id="expertese" class="nav-link">Skills</a>
-            </li>
-            <li class="nav-item">
-              <a href="#my-work" id="previous-work" class="nav-link">My Work</a>
-            </li>
-            <li class="nav-item">
-              <a href="#client-speak" id="comments" class="nav-link">Professors/Colleague</a>
-            </li>
-            <li class="nav-item">
-              <a href="#get-in-touch-section" id="contact-info" class="nav-link">Contact</a>
-            </li>
+          <button id="nav-btn" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a href="#about-me-section" id="abt-me" class="nav-link">About Me</a>
+              </li>
+              <li class="nav-item">
+                <a href="#what-i-do" id="work" class="nav-link">What I Do?</a>
+              </li>
+              <li class="nav-item">
+                <a href="#resume-section" id="bio" class="nav-link">Resume</a>
+              </li>
+              <li class="nav-item">
+                <a href="#skills" id="expertese" class="nav-link">Skills</a>
+              </li>
+              <li class="nav-item">
+                <a href="#my-work" id="previous-work" class="nav-link">My Work</a>
+              </li>
+              <li class="nav-item">
+                <a href="#client-speak" id="comments" class="nav-link">Colleague</a>
+              </li>
+              <li class="nav-item">
+                <a href="#get-in-touch-section" id="contact-info" class="nav-link">Contact</a>
+              </li>
 
-          </ul>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
 
-    <!-- Home Section -->
-    <header id="home-section" class="px-2">
-      <div class="row">
-        <div class="dark-overlay ">
-          <div class="home-inner">
-            <div class="container vertical-center">
-              <div class="row justify-content-center text-light">
-                  <p>Welcome</p> 
-              </div>
-              <div class="row justify-content-center text-light">
-                <div class="display-4 self-align-center name">This is Nirajan Pandey</div>
-              </div>
-              <div class="row justify-content-center text-light">
-                <p>based in Greater Boston Area, Mass</p>
-              </div>
-              <div class="row justify-content-center button">
+      <!-- Home Section -->
+      <header id="home-section" class="px-2">
+        <div class="row">
+          <div class="dark-overlay ">
+            <div class="home-inner">
+              <div class="container vertical-center">
+                <div class="row justify-content-center text-light">
+                  <p>Welcome</p>
+                </div>
+                <div class="row justify-content-center text-light">
+                  <div class="display-4 self-align-center name">This is Nirajan Pandey</div>
+                </div>
+                <div class="row justify-content-center text-light">
+                  <p>based in Greater Boston Area, Mass</p>
+                </div>
+                <div class="row justify-content-center button">
                   <a href="#get-in-touch-section" class="btn btn-primary">Hire Me</a>
-              </div>
-              <div class="row justify-content-center">
-                <div id="arrow">
-                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" class="svg-inline--fa fa-chevron-down fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg>
+                </div>
+                <div class="row justify-content-center">
+                  <div id="arrow">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down"
+                      class="svg-inline--fa fa-chevron-down fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 448 512">
+                      <path fill="currentColor"
+                        d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z">
+                      </path>
+                    </svg>
+                  </div>
                 </div>
               </div>
-             </div>
+            </div>
           </div>
         </div>
-      </div>
-      
-    </header>
 
-    <!-- About Me Section -->
-    <header id="about-me-section" class="px-4" >
-      <div class="container py-5">
-        <div class="display-4 text-center">Know Me More</div>
-        <div class="row"> 
-          <div class="col-lg-8 text-center">
-            <p> <span>I am Nirajan Pandey, senior pursuing Computer Science major at Boston University and am very eager to find
-              an opportunity to apply my computer programming skills beyond classroom setting. I have worked in various projects writing code in Java, HTML, CSS, JavaScript, and MySql. I proactively learn new programming concepts, and I am confident I could make positive and productive contribution to your organization.</span></p>
+      </header>
+
+      <!-- About Me Section -->
+      <header id="about-me-section" class="px-4">
+        <div class="container py-5">
+          <div class="display-4 text-center">Know Me More</div>
+          <div class="row">
+            <div class="col-lg-8 text-center">
+              <p> <span>I am Nirajan Pandey, senior pursuing Computer Science major at Boston University and am very
+                  eager to find
+                  an opportunity to apply my computer programming skills beyond classroom setting. I have worked in
+                  various projects writing code in Java, HTML, CSS, JavaScript, and MySql. I proactively learn new
+                  programming concepts, and I am confident I could make positive and productive contribution to your
+                  organization.</span></p>
+            </div>
+            <div class="col-lg-4">
+              <p> <strong>Name:</strong> Nirajan Pandey</p>
+              <p><strong>Email:</strong> nirajanp@bu.edu</p>
+              <p><strong>Age:</strong> 24</p>
+              <p><strong>From:</strong> Boston, MA</p>
+
+              <a href="https://drive.google.com/file/d/1SQBDbxNAJ9uBlkue-6_JHfu4Mx3CQd74/view?usp=sharing"
+                target="_blank" class="btn btn-primary dwnl-btn">Download CV</a>
+            </div>
           </div>
-          <div class="col-lg-4">
-            <p> <strong>Name:</strong> Nirajan Pandey</p>
-            <p><strong>Email:</strong> nirajanp@bu.edu</p>
-            <p><strong>Age:</strong> 24</p>
-            <p><strong>From:</strong> Boston, MA</p>
-
-            <a href="https://drive.google.com/file/d/1SQBDbxNAJ9uBlkue-6_JHfu4Mx3CQd74/view?usp=sharing" target="_blank" class="btn btn-primary dwnl-btn">Download CV</a>
-          </div> 
-        </div>
-        <div class="row mt-4">
-          <div class="col-lg-3 col-md-6 col-6">
+          <div class="row mt-4">
+            <div class="col-lg-3 col-md-6 col-6">
               <h1>3+</h1>
               <p>Years Experience</p>
-          </div>
-          <div class="col-lg-3 col-md-6 col-6">
-            <h1>10+</h1>
-            <p>Happy Professors</p>
-          </div>
-          <div class="col-lg-3 col-md-6 col-6">
-            <h1>20+</h1>
-            <p>Projects Done</p>
-          </div>
-          <div class="col-lg-3 col-md-6 col-6">
-            <h1>5</h1>
-            <p>Awards</p>
+            </div>
+            <div class="col-lg-3 col-md-6 col-6">
+              <h1>10+</h1>
+              <p>Happy Professors</p>
+            </div>
+            <div class="col-lg-3 col-md-6 col-6">
+              <h1>20+</h1>
+              <p>Projects Done</p>
+            </div>
+            <div class="col-lg-3 col-md-6 col-6">
+              <h1>5</h1>
+              <p>Awards</p>
+            </div>
           </div>
         </div>
-      </div>
-    </header>
+      </header>
 
-    <!-- What I do section -->
-    <header id="what-i-do" class="bg-color px-4">
-      <div class="container py-5">
-        <div class="display-4 text-center">What I Do?</div>
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="d-flex flex-row">
-              <div class="p-4">
-                <div id="icon-comp" class="icn align-self-start">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" fill="currentColor" class="bi bi-laptop" viewBox="0 0 16 16">
-                    <path d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5h11zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2h-11zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5z">
-                  </svg>
-                </div>
-              </div>
-              <div class="p-4 align-self-end"> <h3>Web Design</h3> <span>Designed websites for personal and professional use.</span>  
-                <ul>
-                  <li>
-                    Using HTML, CSS, Bootstrap, Javascript and other web tech to build a website to meet clients need. 
-                  </li>
-                  <li>
-                    Building mobile first web app that works across various platforms and browsers.
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col-lg-6">
-            <div class="d-flex flex-row">
-              <div class="p-4">
-                <div id="icon-ts" class="icn align-self-start">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" fill="currentColor" class="bi bi-gear-wide" viewBox="0 0 16 16">
-                    <path d="M8.932.727c-.243-.97-1.62-.97-1.864 0l-.071.286a.96.96 0 0 1-1.622.434l-.205-.211c-.695-.719-1.888-.03-1.613.931l.08.284a.96.96 0 0 1-1.186 1.187l-.284-.081c-.96-.275-1.65.918-.931 1.613l.211.205a.96.96 0 0 1-.434 1.622l-.286.071c-.97.243-.97 1.62 0 1.864l.286.071a.96.96 0 0 1 .434 1.622l-.211.205c-.719.695-.03 1.888.931 1.613l.284-.08a.96.96 0 0 1 1.187 1.187l-.081.283c-.275.96.918 1.65 1.613.931l.205-.211a.96.96 0 0 1 1.622.434l.071.286c.243.97 1.62.97 1.864 0l.071-.286a.96.96 0 0 1 1.622-.434l.205.211c.695.719 1.888.03 1.613-.931l-.08-.284a.96.96 0 0 1 1.187-1.187l.283.081c.96.275 1.65-.918.931-1.613l-.211-.205a.96.96 0 0 1 .434-1.622l.286-.071c.97-.243.97-1.62 0-1.864l-.286-.071a.96.96 0 0 1-.434-1.622l.211-.205c.719-.695.03-1.888-.931-1.613l-.284.08a.96.96 0 0 1-1.187-1.186l.081-.284c.275-.96-.918-1.65-1.613-.931l-.205.211a.96.96 0 0 1-1.622-.434L8.932.727zM8 12.997a4.998 4.998 0 1 1 0-9.995 4.998 4.998 0 0 1 0 9.996z"/>
-                  </svg>
-                </div>
-              </div>
-              <div class="p-4 align-self-end"> <h3>IT Technician</h3> <span>Helping clients to solve software related issues in their Mac, Windows and Linux machine.</span> 
-                <ul>
-                  <li>Monitoring the ticket queue via ServiceNow platform promptly to solve the client's issue.</li>
-                  <li>Imaging, Backing up and assigning devices to respected co-worker for repair.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <!-- Resume Section -->
-    <header id="resume-section" class="px-4">
-      <div class="container py-5">
-        <div class="display-4 text-center">Resume</div>
-        <div class="row py-4">
-          <div class="col-lg-6">
-            <h2 class="py-3">My Education</h2>
-            <div class="card card-form">
-              <div class="card-body">
-                <p class="badge badge-secondary badge-color">2018-2021</p>
-                <h3>Computer Science, BSc</h3>
-                <p>Boston University</p>
-                <p> <span>Pursuing undergraduate Computer Science degree.</span></p>
-              </div>
-            </div>
-            <div class="py-2"></div>
-            <div class="card card-form">
-              <div class="card-body">
-                <p class="badge badge-secondary badge-color">2013-2015</p>
-                <h3>High School</h3>
-                <p>Trinity Int't College, Nepal</p>
-                <p> <span>Completed high school focusing in Business.</span> </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <h2 class="py-3">My Experience</h2>
-            <div class="card card-form">
-              <div class="card-body">
-                <p class="badge badge-secondary badge-color">2020-Present</p>
-                <h3>IT Specialist</h3>
-                <p>Boston University</p>
-                <p> <span>Helping clients to solve software related issues in various OS.</span> </p>
-              </div>
-            </div>
-            <div class="py-2"></div>
-            <div class="card card-form">
-              <div class="card-body">
-                <p class="badge badge-secondary badge-color">2020-Present</p>
-                <h3>Design Apprentice</h3>
-                <p>Gimmick Box, Nepal</p>
-                <p> <span> Learning best practices of web development.</span></p>
-              </div>
-            </div>
-          </div>
-        </div>
-        </div>
-    </header>
-
-    <!-- Skills -->
-    <header>
-      <div id="skills" class="bg-light px-4">
-        <div class="container">
-          <h2 class="py-5 text-center display-4">My Skills</h2>
+      <!-- What I do section -->
+      <header id="what-i-do" class="bg-color px-4">
+        <div class="container py-5">
+          <div class="display-4 text-center">What I Do?</div>
           <div class="row">
             <div class="col-lg-6">
-              <div class="bar">
-                <div>
-                  <p > <strong>HTML/CSS</strong> </p>
+              <div class="d-flex flex-row">
+                <div class="p-4">
+                  <div id="icon-comp" class="icn align-self-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" fill="currentColor"
+                      class="bi bi-laptop" viewBox="0 0 16 16">
+                      <path
+                        d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5h11zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2h-11zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5z" />
+                    </svg>
+                  </div>
                 </div>
-                <div  class="progress">
-                  <div class="progress-bar"
-                  style="width: 65%;"  
-                  aria-valuemin="50" aria-valuemax="100"></div>
+                <div class="p-4 align-self-end">
+                  <h3>Web Design</h3> <span>Designed websites for personal and professional use.</span>
+                  <ul>
+                    <li>
+                      Using HTML, CSS, Bootstrap, Javascript and other web tech to build a website to meet clients need.
+                    </li>
+                    <li>
+                      Building mobile first web app that works across various platforms and browsers.
+                    </li>
+                  </ul>
                 </div>
               </div>
-              
-              <div class="bar py-4">
-                <div >
-                  <p > <strong>Bootstrap</strong></p>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="d-flex flex-row">
+                <div class="p-4">
+                  <div id="icon-ts" class="icn align-self-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" fill="currentColor"
+                      class="bi bi-gear-wide" viewBox="0 0 16 16">
+                      <path
+                        d="M8.932.727c-.243-.97-1.62-.97-1.864 0l-.071.286a.96.96 0 0 1-1.622.434l-.205-.211c-.695-.719-1.888-.03-1.613.931l.08.284a.96.96 0 0 1-1.186 1.187l-.284-.081c-.96-.275-1.65.918-.931 1.613l.211.205a.96.96 0 0 1-.434 1.622l-.286.071c-.97.243-.97 1.62 0 1.864l.286.071a.96.96 0 0 1 .434 1.622l-.211.205c-.719.695-.03 1.888.931 1.613l.284-.08a.96.96 0 0 1 1.187 1.187l-.081.283c-.275.96.918 1.65 1.613.931l.205-.211a.96.96 0 0 1 1.622.434l.071.286c.243.97 1.62.97 1.864 0l.071-.286a.96.96 0 0 1 1.622-.434l.205.211c.695.719 1.888.03 1.613-.931l-.08-.284a.96.96 0 0 1 1.187-1.187l.283.081c.96.275 1.65-.918.931-1.613l-.211-.205a.96.96 0 0 1 .434-1.622l.286-.071c.97-.243.97-1.62 0-1.864l-.286-.071a.96.96 0 0 1-.434-1.622l.211-.205c.719-.695.03-1.888-.931-1.613l-.284.08a.96.96 0 0 1-1.187-1.186l.081-.284c.275-.96-.918-1.65-1.613-.931l-.205.211a.96.96 0 0 1-1.622-.434L8.932.727zM8 12.997a4.998 4.998 0 1 1 0-9.995 4.998 4.998 0 0 1 0 9.996z" />
+                    </svg>
+                  </div>
                 </div>
-                <div class="progress">
-                  <div class="progress-bar" style="width: 80%;" aria-valuemin="50" aria-valuemax="100"></div>
+                <div class="p-4 align-self-end">
+                  <h3>IT Technician</h3> <span>Helping clients to solve software related issues in their Mac, Windows
+                    and Linux machine.</span>
+                  <ul>
+                    <li>Monitoring the ticket queue via ServiceNow platform promptly to solve the client's issue.</li>
+                    <li>Imaging, Backing up and assigning devices to respected co-worker for repair.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Resume Section -->
+      <header id="resume-section" class="px-4">
+        <div class="container py-5">
+          <div class="display-4 text-center">Resume</div>
+          <div class="row py-4">
+            <div class="col-lg-6">
+              <h2 class="py-3">My Education</h2>
+              <div class="card card-form">
+                <div class="card-body">
+                  <p class="badge badge-secondary badge-color">2018-2021</p>
+                  <h3>Computer Science, BSc</h3>
+                  <p>Boston University</p>
+                  <p> <span>Pursuing undergraduate Computer Science degree.</span></p>
+                </div>
+              </div>
+              <div class="py-2"></div>
+              <div class="card card-form">
+                <div class="card-body">
+                  <p class="badge badge-secondary badge-color">2013-2015</p>
+                  <h3>High School</h3>
+                  <p>Trinity Int't College, Nepal</p>
+                  <p> <span>Completed high school focusing in Business.</span> </p>
                 </div>
               </div>
             </div>
             <div class="col-lg-6">
-              <div class="bar">
-                <div >
-                  <p > <strong>Core Java</strong></p>
-                </div>
-                <div class="progress">
-                  <div class="progress-bar" style="width: 75%;" aria-valuemin="50" aria-valuemax="100"></div>
+              <h2 class="py-3">My Experience</h2>
+              <div class="card card-form">
+                <div class="card-body">
+                  <p class="badge badge-secondary badge-color">2020-Present</p>
+                  <h3>IT Specialist</h3>
+                  <p>Boston University</p>
+                  <p> <span>Helping clients to solve software related issues in various OS.</span> </p>
                 </div>
               </div>
-              <div class="bar py-4">
-                <div >
-                  <p > <strong>Javascript</strong></p>
-                </div>
-                <div class="progress">
-                  <div class="progress-bar" style="width: 55%;" aria-valuemin="50" aria-valuemax="100"></div>
+              <div class="py-2"></div>
+              <div class="card card-form">
+                <div class="card-body">
+                  <p class="badge badge-secondary badge-color">2020-Present</p>
+                  <h3>Design Apprentice</h3>
+                  <p>Gimmick Box, Nepal</p>
+                  <p> <span> Learning best practices of web development.</span></p>
                 </div>
               </div>
             </div>
           </div>
         </div>
+      </header>
 
-        <div class="row justify-content-center py-5">
-          <!-- <input type="button" value="Download CV" class="dwnl-btn"> -->
-
-          <a href="https://drive.google.com/file/d/1SQBDbxNAJ9uBlkue-6_JHfu4Mx3CQd74/view?usp=sharing" target="_blank" class="btn btn-primary dwnl-btn">Download CV</a>
-        </div> 
-    </div>
-  </header>
-  
-
-    <!-- My Work -->
-    <header id="my-work" class="px-4">
-      <div class="container py-5">
-        <div class="display-4 text-center">My Work</div>
-        <p class="row justify-content-center all-works" class="all-works" >All</p>
-        <a class="row justify-content-center" href="https://github.com/nirajanp" target="_blank"> <p class="all-works">Repo</p></a>
-        <div class="row" id="repos">
-        </div>
-      </div>
-    </header>
-
-    <!-- Client Speak Section -->
-    <header id="client-speak" class="bg-light px-4">
-      <div class="container py-5">
-        <div class="display-4 text-center ">Colleague</div>
-        <div class="row py-5">
-          <div class="col-lg-6 py-2">
-            <div class="card card-form">
-              <div class="card-body">
-                <div class="d-flex flex-row client">
-                  <div class="p-4">
-                    <img src="https://media-exp1.licdn.com/dms/image/C4D03AQGsEGYe4YkYXQ/profile-displayphoto-shrink_400_400/0/1522455857643?e=1621468800&v=beta&t=RN-PGiFNkOokSmH_xRmK5WKq9FJXSzIanEDDAf3v2ug" alt="" class="img-fluid">
-                  </div>
+      <!-- Skills -->
+      <header>
+        <div id="skills" class="bg-light px-4">
+          <div class="container">
+            <h2 class="py-5 text-center display-4">My Skills</h2>
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="bar">
                   <div>
-                    <h5>Saqib Nazm</h5>
-                    <p>Client from USA</p>
+                    <p> <strong>HTML/CSS</strong> </p>
+                  </div>
+                  <div class="progress">
+                    <div class="progress-bar" style="width: 65%;" role="progressbar"></div>
                   </div>
                 </div>
-                <div>"Meet all user requirements."</div>
-              </div>
 
-              <div class="rating">
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col-lg-6 py-2">
-            <div class="card card-form">
-              <div class="card-body">
-                <div class="d-flex flex-row client">
-                  <div class="p-4">
-                    <img src="https://media-exp1.licdn.com/dms/image/C5103AQGCXLaysNh53A/profile-displayphoto-shrink_800_800/0/1558102591962?e=1621468800&v=beta&t=3lZhE_sSjS7YwGmds2-azOgxjqMVapmXIeZrA8bZXXA" alt="" class="img-fluid">
-                  </div>
+                <div class="bar py-4">
                   <div>
-                    <h5> Kritish Dhaubanjar </h5>
-                    <p>Client from Nepal</p>
+                    <p> <strong>Bootstrap</strong></p>
+                  </div>
+                  <div class="progress">
+                    <div class="progress-bar" style="width: 80%;" role="progressbar"></div>
                   </div>
                 </div>
-                <div>"Very nice product with responsive design."</div>
               </div>
+              <div class="col-lg-6">
+                <div class="bar">
+                  <div>
+                    <p> <strong>Core Java</strong></p>
+                  </div>
+                  <div class="progress">
+                    <div class="progress-bar" style="width: 75%;" role="progressbar"></div>
+                  </div>
+                </div>
+                <div class="bar py-4">
+                  <div>
+                    <p> <strong>Javascript</strong></p>
+                  </div>
+                  <div class="progress">
+                    <div class="progress-bar" style="width: 55%;" role="progressbar"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-              <div class="rating">
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
+          <div class="row justify-content-center py-5">
+            <!-- <input type="button" value="Download CV" class="dwnl-btn"> -->
+
+            <a href="https://drive.google.com/file/d/1SQBDbxNAJ9uBlkue-6_JHfu4Mx3CQd74/view?usp=sharing" target="_blank"
+              class="btn btn-primary dwnl-btn">Download CV</a>
+          </div>
+        </div>
+      </header>
+
+      <!-- My Work -->
+      <header id="my-work" class="px-4">
+        <div class="container py-5">
+          <div class="display-4 text-center">My Work</div>
+          <p class="row justify-content-center all-works">All</p>
+          <a class="row justify-content-center" href="https://github.com/nirajanp" target="_blank">
+            <p class="all-works">Repo</p>
+          </a>
+          <div class="row" id="repos">
+          </div>
+        </div>
+      </header>
+
+      <!-- Client Speak Section -->
+      <header id="client-speak" class="bg-light px-4">
+        <div class="container py-5">
+          <div class="display-4 text-center ">Colleague</div>
+          <div class="row py-5">
+            <div class="col-lg-6 py-2">
+              <div class="card card-form">
+                <div class="card-body">
+                  <div class="d-flex flex-row client">
+                    <div class="p-4">
+                      <img
+                        src="https://media-exp1.licdn.com/dms/image/C4D03AQGsEGYe4YkYXQ/profile-displayphoto-shrink_400_400/0/1522455857643?e=1621468800&v=beta&t=RN-PGiFNkOokSmH_xRmK5WKq9FJXSzIanEDDAf3v2ug"
+                        alt="" class="img-fluid">
+                    </div>
+                    <div>
+                      <h5>Saqib Nazm</h5>
+                      <p>Client from USA</p>
+                    </div>
+                  </div>
+                  <div>"Meet all user requirements."</div>
+                </div>
+
+                <div class="rating">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6 py-2">
+              <div class="card card-form">
+                <div class="card-body">
+                  <div class="d-flex flex-row client">
+                    <div class="p-4">
+                      <img
+                        src="https://media-exp1.licdn.com/dms/image/C5103AQGCXLaysNh53A/profile-displayphoto-shrink_800_800/0/1558102591962?e=1621468800&v=beta&t=3lZhE_sSjS7YwGmds2-azOgxjqMVapmXIeZrA8bZXXA"
+                        alt="" class="img-fluid">
+                    </div>
+                    <div>
+                      <h5> Kritish Dhaubanjar </h5>
+                      <p>Client from Nepal</p>
+                    </div>
+                  </div>
+                  <div>"Very nice product with responsive design."</div>
+                </div>
+
+                <div class="rating">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </header>
+      </header>
 
-    <!-- Get in Touch -->
-    <header id="get-in-touch-section" class="px-4">
-      <div class="container py-5">
-        <div class="display-4 text-center">Get in Touch</div>
-        <div class="row py-5">
-          <div class="col-lg-4">
-            <h2>Address</h2>
-            <div class="py-2">
-              <p>Commonwealth Ave </p> <p>Boston, MA</p>
-            </div>
-            <div class="d-flex flex-row box">
-              <div >
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-phone icn" viewBox="0 0 16 16">
-                  <path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z"/>
-                  <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
-                </svg>
+      <!-- Get in Touch -->
+      <header id="get-in-touch-section" class="px-4">
+        <div class="container py-5">
+          <div class="display-4 text-center">Get in Touch</div>
+          <div class="row py-5">
+            <div class="col-lg-4">
+              <h2>Address</h2>
+              <div class="py-2">
+                <p>Commonwealth Ave </p>
+                <p>Boston, MA</p>
               </div>
-            
-              <a style="padding-left: 10px;" href="tel:(617) 687 9212">(617) 687 9212</a>
-            </div>
-            
-            <div class="d-flex flex-row">
-              <div >
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill icn" viewBox="0 0 16 16">
-                  <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"/>
-                </svg>
-              </div>
-             
-              <a style="padding-left: 10px;" href="mailto:nirajanp@bu.edu">nirajanp@bu.edu</a>
-            </div>
-            <div class="social-network">
-              <h2 class="py-2">Follow Me</h2>
-              <div class="row social-network-icons">
-                <div class="linkedin">
-                  <a href="https://www.linkedin.com/in/nirajanp/" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
-                      <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
-                    </svg>
-                  </a>
-                  
-                </div>
-                <div class="github">
-                  <a href="https://github.com/nirajanp" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-                      <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-                    </svg>
-                  </a>
+              <div class="d-flex flex-row box">
+                <div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-phone icn" viewBox="0 0 16 16">
+                    <path
+                      d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z" />
+                    <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                  </svg>
                 </div>
 
-                <div class="google">
-                  <a href="https://www.google.com/" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-google" viewBox="0 0 16 16">
-                      <path d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z"/>
-                    </svg>
-                  </a>
+                <a style="padding-left: 10px;" href="tel:617-687-9212">(617) 687 9212</a>
+              </div>
+
+              <div class="d-flex flex-row">
+                <div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-envelope-fill icn" viewBox="0 0 16 16">
+                    <path
+                      d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z" />
+                  </svg>
+                </div>
+
+                <a style="padding-left: 10px;" href="mailto:nirajanp@bu.edu">nirajanp@bu.edu</a>
+              </div>
+              <div class="social-network">
+                <h2 class="py-2">Follow Me</h2>
+                <div class="row social-network-icons">
+                  <div class="linkedin">
+                    <a href="https://www.linkedin.com/in/nirajanp/" target="_blank">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-linkedin" viewBox="0 0 16 16">
+                        <path
+                          d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                      </svg>
+                    </a>
+
+                  </div>
+                  <div class="github">
+                    <a href="https://github.com/nirajanp" target="_blank">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-github" viewBox="0 0 16 16">
+                        <path
+                          d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                      </svg>
+                    </a>
+                  </div>
+
+                  <div class="google">
+                    <a href="https://www.google.com/" target="_blank">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-google" viewBox="0 0 16 16">
+                        <path
+                          d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z" />
+                      </svg>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="col-lg-8">
-            <h2>Send me a note</h2>
+            <div class="col-lg-8">
+              <h2>Send me a note</h2>
 
-            <form class="row" id="my-form" action="https://formspree.io/f/mpzkweow" method="POST">
-              <div class="col-12">
-                <div class="form-group">
-                  <input type="email" name="email" class="form-control form-control-sm form-name" placeholder="Email"/>
+              <form class="row" id="my-form" action="https://formspree.io/f/mpzkweow" method="POST">
+                <div class="col-12">
+                  <div class="form-group">
+                    <input type="email" name="email" class="form-control form-control-sm form-name"
+                      placeholder="Email" />
+                  </div>
                 </div>
-              </div>
-                
-              <div class="col-12">
-                <div class="form-group">
-                  <textarea type="text" name="message" class="form-control form-control-sm form-yourself" cols="2" rows="5" placeholder="Send me a message.."></textarea>
-                  
-                </div>
-              </div>
-  
-              <div class="col-12">
-                <div class="form-group">
-                  <button id="my-form-button" class="send-msg-btn">Submit</button>
-                  <p id="my-form-status" ></p>
-                </div>
-              </div>  
-            </form>
-            
 
+                <div class="col-12">
+                  <div class="form-group">
+                    <textarea name="message" class="form-control form-control-sm form-yourself" cols="2" rows="5"
+                      placeholder="Send me a message.."></textarea>
+
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <div class="form-group">
+                    <button id="my-form-button" class="send-msg-btn">Submit</button>
+                    <p id="my-form-status"></p>
+                  </div>
+                </div>
+              </form>
+
+
+            </div>
           </div>
         </div>
-      </div>
-    </header>
+      </header>
 
-    <!-- Copyright -->
-    <footer id="main-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col text-center">
-            
-            <input type="button" id="top" value="Top">
+      <!-- Copyright -->
+      <footer id="main-footer">
+        <div class="container">
+          <div class="row">
+
+            <div class="col text-center">
+              <div id="loc">Thank you for visiting from </div>
+              <input type="button" id="top" value="Top">
               <div id="date"> </div>
             </div>
           </div>
-          </div>
+
+
         </div>
-      </div>
-    </footer>
+      </footer>
+
     </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
+      integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
+      integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc"
+      crossorigin="anonymous"></script>
+   
   </div>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+</body>
 
-    
-  </body>
 </html>
