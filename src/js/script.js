@@ -1,6 +1,3 @@
-// import { getLocation } from "./module.js";
-// import { getDateFunc } from "./module.js";
-
 const navbar = document.getElementById("nav");
 const links = navbar.getElementsByClassName("nav-link");
 const arrow = document.getElementById("arrow");
@@ -15,14 +12,12 @@ const getInTouch = document.getElementById("contact-info");
 const toTop = document.getElementById("top");
 const text = document.querySelector(".name");
 
-// const user = {};
 
 class APIs {
    fetchPhoto () {
     fetch("https://api.github.com/users/nirajanp")
   .then((res) => res.json())
   .then((data) => {
-    console.log(data);
     document.getElementById("avatar").setAttribute("src", data.avatar_url);
   }); 
    }
@@ -31,9 +26,9 @@ class APIs {
     fetch("https://api.github.com/users/nirajanp/repos")
     .then((res) => res.json())
     .then((data) => {
-      console.log(data);
+      
       for (let repo of data) {
-        //console.log(repo);
+        
         const card = document.createElement("div");
         card.setAttribute("class", "card");
         const cardBody = document.createElement("div");
@@ -44,7 +39,7 @@ class APIs {
   
         cardBody.appendChild(heading);
         card.appendChild(cardBody);
-        //console.log(card);
+
         document.getElementById("repos").appendChild(card);
       }
     });  
