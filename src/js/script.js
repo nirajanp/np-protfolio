@@ -99,9 +99,8 @@ function getDateFunc() {
     "Copyright © " + date.getFullYear();
   writeDate.append(dateTemplateBody);
 }
-  
- 
-  const navCollapseFunction = function () {
+
+const navCollapseFunction = function () {
     for (link of links) {
       link.addEventListener("click", () => {
         document.getElementById("navbarCollapse").className =
@@ -110,7 +109,7 @@ function getDateFunc() {
     }
   };
   
-  function smoothScroll(target) {
+function smoothScroll(target) {
     target = document.getElementById(target);
     window.scroll({
       top:
@@ -120,7 +119,7 @@ function getDateFunc() {
     });
   }
   
-  const animation = function () {
+const animation = function () {
     text.innerHTML = text.textContent.replace(
       /\S/g,
       "<span class='letter'>$&</span>"
